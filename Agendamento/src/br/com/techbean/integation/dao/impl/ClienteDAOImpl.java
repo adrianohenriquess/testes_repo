@@ -14,4 +14,11 @@ public class ClienteDAOImpl extends GenericDAOImpl<Cliente> implements ClienteDA
 		}
 		return instance;
 	}
+	
+	public static ClienteDAOImpl getNewInstance(){
+		if (instance == null){
+			instance = new ClienteDAOImpl();
+		}
+		return instance;
+	}
 }
